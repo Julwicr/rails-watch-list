@@ -1,0 +1,18 @@
+<h1>Lists#show</h1>
+<%= @list.name %>
+<%# Add a bookmark %>
+
+
+<div class="container">
+<% @bookmarks.each do |bookmark| %>
+<div class="card">
+  <%= bookmark.movie.title %>
+</div>
+<% end %>
+</div>
+
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.input :movie, collection: @movies %>
+  <%= f.input :comment %>
+  <%= f.submit %>
+<% end %>
