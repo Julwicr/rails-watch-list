@@ -1,10 +1,12 @@
-<h1>Lists#index</h1>
+<h1>Welcome to JulWatchList</h1>
 
-<div class="container">
+<div class="lists-container">
 <% @lists.each do |list| %>
-  <div class="card">
-  <%= link_to list.name, list_path(list) %>
+  <%= link_to list_path(list), class: 'list-card' do %>
+  <div style= "background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('default_back_list.png') %>)">
+      <span> <%= list.name %> </span>
   </div>
+  <% end %>
 <% end %>
 </div>
 <%= link_to 'Create list', new_list_path %>

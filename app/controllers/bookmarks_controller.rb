@@ -8,7 +8,7 @@ class BookmarksController < ApplicationController
       redirect_to list_path(@bookmark.list)
     else
       # TO BE FIXED
-      render list_path(@bookmark.list.id), status: :unprocessable_entity
+      # render list_path(@bookmark.list), status: :unprocessable_entity
     end
   end
 

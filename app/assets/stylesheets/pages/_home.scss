@@ -1,1 +1,34 @@
 // Specific CSS for your home-page
+$main-color: #0000f4;
+
+.body {
+  background-color: lightgray;
+}
+
+.lists-container {
+  width: 75vw;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.list-card {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
+  color: $main-color;
+  margin: 10px;
+  width: 75vw;
+  div {
+    color: white;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.list-card:hover {
+  border: 4px solid $main-color;
+}
