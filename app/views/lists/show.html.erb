@@ -6,7 +6,11 @@
 <div class="container">
 <% @bookmarks.each do |bookmark| %>
 <div class="card">
+<div>
   <%= bookmark.movie.title %>
+  <%= image_tag "https://image.tmdb.org/t/p/original#{bookmark.movie.poster_url}", style: 'width:100px;margin:10px;' %>
+</div>
+  <%= bookmark.movie.overview %>
 </div>
 <% end %>
 </div>
