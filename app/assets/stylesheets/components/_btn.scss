@@ -1,0 +1,19 @@
+.btn-create-list {
+  color: $secondary-color;
+  background-color: $main-color;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  line-height: 110px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 5px solid $secondary-color;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+    transform: translateY(1px);
+  }
+}

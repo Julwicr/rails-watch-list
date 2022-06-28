@@ -1,12 +1,16 @@
-<h1>Welcome to JulWatchList</h1>
+
+<div class="header">
+  <h1>Julwicr's Watchlists</h1>
+  <%= link_to 'Create list', new_list_path, class: 'btn-create-list' %>
+</div>
 
 <div class="lists-container">
 <% @lists.each do |list| %>
   <%= link_to list_path(list), class: 'list-card' do %>
   <div style= "background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('default_back_list.png') %>)">
       <span> <%= list.name %> </span>
+      <span> <%# list.created_at %> </span>
   </div>
   <% end %>
 <% end %>
 </div>
-<%= link_to 'Create list', new_list_path %>
